@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './SearchBar.css'
 
 const SearchBar = props => {
   return (
     <div className="searchBar">
-      <i className="fa fa-instagram" aria-hidden="true" />
+      <i id="icon_insta" className="fa fa-instagram fa-3x bottomPadding" aria-hidden="true" />
 
-      <input type="text" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome" />
+      <input className="empty bottomPadding" type="Search" placeholder="&#xF002; Search" />
 
-      <div className="topRightIcons">
-        <i className="fa fa-compass" aria-hidden="true"></i>
-        <i className="fa fa-heart-o" aria-hidden="true"></i>
-        <i className="fa fa-user-o" aria-hidden="true"></i>
+      <div className="topRightIcons bottomPadding">
+        <i className="fa fa-compass fa-3x" aria-hidden="true"></i>
+        <i className="fa fa-heart-o fa-3x" aria-hidden="true"></i>
+        <i className="fa fa-user-o fa-3x" aria-hidden="true"></i>
 
       </div>
 

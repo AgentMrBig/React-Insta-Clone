@@ -1,0 +1,48 @@
+.searchBar{
+    border-bottom: solid 1px grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+   
+   
+}
+
+#icon_insta{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+input{
+    align-self: center;
+    margin-left: 4rem;
+    height: 2.5rem;
+    width: 300px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.topRightIcons{
+    margin-left: 0rem;
+
+}
+
+.topRightIcons i{
+   margin: 20px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+.bottomPadding{
+    margin-bottom: 10px;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
