@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css'
 
 const PostContainer = props => {
@@ -11,7 +12,10 @@ const PostContainer = props => {
                     <h2>philzcoffee</h2>
                 </div>
             </div>
+            <div className="postPhoto">
 
+            </div>
+            <CommentSection />
 
 
         </div>)
