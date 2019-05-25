@@ -1,39 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import Comment from './Comment';
 
 import './CommentSection.css'
 
-const CommentSection = props => {
-    return (
-        <div className="commentSection">
-            <div className="iconsLikes">
-                <i className="fa fa-heart-o" >
-                    <div className="numLikesOutput">
-                        154
-                    </div>
-                </i>
-                <i className="fa fa-comment-o" >
-                    <div className="numLikesOutput">
-                        35
-                    </div>
-                </i>
-
-
-
-            </div>
-            <div className="comments">
-                SomeDude: This is a test comment!
-
-                <div className="lastPostTime">
-                    <span id="lastPostTime"><h5>2 HOURS AGO</h5></span>
-                </div>
-
-                <hr />
-                <input id="commentInput" type="text" className="commentInput" placeholder="Add a comment..." />
-                <i className="fa fa-ellipsis-h options" aria-hidden="true"></i>
-            </div>
-        </div>)
-
-}
-
-export default CommentSection;
+class CommentSection extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        comments: props.comments
+      };
+    }
+    render() {
+      return (
+        <div>
+          {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+          <hr />
+          <input className="commentInput" type="text" placeholder="Add Comment . . . " />
+          
+        </div>
+        
+      );
+    }
+  }
+  
+  CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+    )
+  };
+  
+  export default CommentSection;

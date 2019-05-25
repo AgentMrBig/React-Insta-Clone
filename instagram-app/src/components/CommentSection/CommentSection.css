@@ -36,6 +36,7 @@
 
 .commentInput{
     margin-left: 0;
+    margin-bottom: 5px;
     width: 91%;
     border: none;
     text-align: left;
@@ -62,3 +63,20 @@
 .fa-comment-o{
     margin-right: 33rem;
 }
+
+.comment-text {
+    text-align: left;
+    padding: 2px;
+    margin-left: 4px;
+}
+  
+.comment {
+    font-weight: 300;
+    font-size: 14px;
+}
+  
+.user {
+    font-weight: 500;
+    font-size: 18px;
+}
+
