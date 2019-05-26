@@ -14,7 +14,7 @@ const Post = props => {
     <div className="post-border">
       <div className="post-header">
         <div className="post-photo"> 
-            <img src={props.post.thumbnailUrl} id="post-thumb" className="post-thumb" height="200" />
+            <img src={props.post.thumbnailUrl} alt="" id="post-thumb" className="post-thumb" height="200" />
         </div>
         <div className="avatar-name">
             {props.post.username}

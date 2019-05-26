@@ -16,8 +16,8 @@ class CommentSection extends React.Component {
         <div>
           {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
           <hr />
-          <input className="commentInput" type="text" placeholder="Add Comment . . . " />
-          
+          <input className="commentInput" type="text" placeholder="   Add Comment . . . " />
+          <span><strong>. . .</strong></span>
         </div>
         
       );

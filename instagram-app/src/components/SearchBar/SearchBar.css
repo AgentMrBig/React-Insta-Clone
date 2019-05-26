@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    background-color: white;
    
    
 }
@@ -11,12 +11,13 @@
 #icon_insta{
     margin-left: 20px;
     margin-right: 20px;
-    
+    align-content: center;
+    align-self: center;
 }
 
 input{
     align-self: center;
-    margin-left: 4rem;
+    margin-top: 0.25rem;
     height: 2.5rem;
     width: 300px;
     background-color: rgb(233, 233, 233);
@@ -27,6 +28,8 @@ input{
 
 .topRightIcons{
     margin-left: 0rem;
+    align-content: center;
+    align-self: center;
 
 }
 
@@ -45,4 +48,13 @@ input.empty {
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
+}
+
+.iconSizer{
+    font-size: 2rem;
+}
+
+.logo-image{
+    height: 4rem;
+   
 }

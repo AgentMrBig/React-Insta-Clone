@@ -38,9 +38,10 @@
     margin-left: 0;
     margin-bottom: 5px;
     width: 91%;
+    border-radius: 0  0  0 5px;
     border: none;
     text-align: left;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(243, 241, 241);
     /* border: solid 1px purple; */
 }
 
