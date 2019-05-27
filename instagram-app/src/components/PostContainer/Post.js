@@ -48,7 +48,7 @@ class Post extends React.Component {
           like={this.like}
           likes={this.state.likes}
         />
-
+        <hr></hr>
         <CommentSection comments={this.props.post.comments} postId={this.props.post.imageUrl} />
       </div>
     );

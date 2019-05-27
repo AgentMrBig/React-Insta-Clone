@@ -15,7 +15,7 @@ const SearchBar = props => {
       <div className="topRightIcons bottomPadding">
         <i className="fa fa-compass iconSizer" aria-hidden="true"></i>
         <i className="fa fa-heart-o iconSizer" aria-hidden="true"></i>
-        <i className="fa fa-user-o iconSizer" aria-hidden="true"></i>
+        <i className="fa fa-user-o iconSizer" aria-hidden="true" onClick={props.logout}></i>
 
       </div>
 

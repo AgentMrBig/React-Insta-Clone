@@ -8,7 +8,7 @@ const CommentInput = props => {
                 className="commentInput"
                 type="text"
                 value={props.comment}
-                placeholder="Add comment... "
+                placeholder="   Add comment... "
                 onChange={props.changeComment}
             />
             <span className="options"><strong>. . .</strong></span>

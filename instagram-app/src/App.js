@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
 import PropTypes from 'prop-types';
-import PostContainer from './components/PostContainer/PostContainer';
+
+import withAuthenticate from './components/Authentication/withAuthenticate'
+import LoginPage from './components/Login/LoginPage'
+import PostsPage from './components/PostContainer/PostsPage'
 
 import './App.css';
-import dummyData from './dummy-data.js';
+
 
 const Test = (props) => {
   return (
@@ -19,50 +21,20 @@ Test.propTypes = {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      posts: [],
-      filteredPosts: []
-    }
-    this.debug();
+    this.state = {};
+
   }
 
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
-
-  debug() {
-    console.log(this.state.posts);
-  }
-
-  searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
-        return p;
-      }
-    });
-
-
-    this.setState({ filteredPosts: posts });
-  }
   render() {
     return (
       <div className="App">
-
-        <SearchBar
-          searchTerm={this.state.searchTerm}
-          searchPosts={this.searchPostsHandler}
-        />
-        <PostContainer posts={
-          this.state.filteredPosts.length > 0
-            ? this.state.filteredPosts
-            : this.state.posts
-
-        }
-        />
-        {/* <Test str={'EricHendrix'}/> */}
+        <ComponentFromWithAuthenticate />
       </div>
-    );
+    )
   }
+
 }
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(LoginPage);
 
 export default App;
