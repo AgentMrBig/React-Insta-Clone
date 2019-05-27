@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PropTypes from 'prop-types';
 import PostContainer from './components/PostContainer/PostContainer';
-import DummyData from './dummy-data.js'
+
 import './App.css';
 import dummyData from './dummy-data.js';
 
