@@ -50,9 +50,16 @@
 }
 
 .options{
+    
     padding:12px;
+    padding-bottom: 16px;
+    padding-top: 8px;
+    margin-bottom: 2px;
     /* border: solid 1px green; */
     font-size: 1.2rem;
+    border: solid 1px rgb(194, 192, 192);
+    margin-bottom: 5px;
+    
 }
 
 .numLikesOutput{

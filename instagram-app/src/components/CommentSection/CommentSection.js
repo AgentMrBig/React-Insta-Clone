@@ -5,29 +5,29 @@ import Comment from './Comment';
 import './CommentSection.css'
 
 class CommentSection extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        comments: props.comments
-      };
-    }
-    render() {
-      return (
-        <div>
-          {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-          <hr />
-          <input className="commentInput" type="text" placeholder="   Add Comment . . . " />
-          <span><strong>. . .</strong></span>
-        </div>
-        
-      );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: props.comments
+    };
   }
-  
-  CommentSection.propTypes = {
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
-    )
-  };
-  
-  export default CommentSection;
+  render() {
+    return (
+      <div>
+        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
+        <hr />
+        <input className="commentInput" type="text" placeholder="   Add Comment . . . " onChange={props.changeComment} />
+        <span className="options"><strong>. . .</strong></span>
+      </div>
+
+    );
+  }
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+  )
+};
+
+export default CommentSection;

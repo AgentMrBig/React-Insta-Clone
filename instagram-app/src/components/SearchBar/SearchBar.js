@@ -10,7 +10,7 @@ const SearchBar = props => {
       <div className="logo">
         <img alt="instagram logo" src={Logo} className="logo-image" />
       </div>
-      <input className="empty bottomPadding" type="Search" placeholder="&#xF002; Search" />
+      <input className="empty bottomPadding" type="Search" placeholder="&#xF002; Search" onKeyDown={props.searchPosts} />
 
       <div className="topRightIcons bottomPadding">
         <i className="fa fa-compass iconSizer" aria-hidden="true"></i>
