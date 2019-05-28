@@ -10,7 +10,10 @@ class PostsPage extends Component {
             posts: [],
             filteredPosts: []
         };
+        this.init()
     }
+
+
     componentDidMount() {
         this.setState({ posts: dummyData });
     }
@@ -28,6 +31,22 @@ class PostsPage extends Component {
         localStorage.setItem('user', '');
         window.location.reload();
     }
+
+    scrolled = (e) => {
+        // let mainDiv = window.document;
+        // if (mainDiv.scrollTop != 0) {
+        //     console.log(mainDiv.classList);
+        // }
+
+        console.log(e.target.body);
+
+    }
+    init() {
+        window.addEventListener('scroll', this.scrolled);
+    }
+
+
+
     searchPostsHandler = e => {
         const posts = this.state.posts.filter(p => {
             if (p.username.includes(e.target.value)) {

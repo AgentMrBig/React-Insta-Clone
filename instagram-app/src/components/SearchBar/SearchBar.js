@@ -93,7 +93,8 @@ const SearchBar = props => {
 
 
 
-    </SearchBarContainer>)
+    </SearchBarContainer>
+  )
 
 }
 
