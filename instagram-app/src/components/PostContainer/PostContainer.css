@@ -1,0 +1,14 @@
+.post-container{
+    display:flex;
+    flex-direction: column;
+    /* border: solid 1px grey; */
+    margin-top: 20px;
+    width: 40rem;
+    align-self: center;
+    border-radius: 5px;
+    
+}
+
+
+
+
